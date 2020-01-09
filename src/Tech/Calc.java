@@ -10,13 +10,6 @@ public class Calc {
 
     // Start
 
-   /* String taxpayerDiscount(boolean choose) {
-        if (choose) {
-            return "Ano";
-        } else return "ne";
-    }*/
-
-
     public double superGrossWage(double wage) {
         return (wage / 100) * parameters.getSGW();
     }
@@ -59,7 +52,7 @@ public class Calc {
         return wage - socialInsuranceEmployee(wage) - healthInsuranceEmployee(wage) - afterDeductionOfDiscounts(wage, choose);
     }
 
-    // 3) Round
+    // 4) Round
     public long round(double input) {
         long i = (long) Math.ceil(input);
         return ((i + 99) / 100) * 100;

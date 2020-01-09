@@ -7,44 +7,30 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import Tech.*;
 
-
 public class Controller {
 
     @FXML
-    private TextField NameLabel;
+    private TextField nameField;
 
     @FXML
-    private TextField DirectoryLabel;
+    private TextField directoryField;
 
     @FXML
-    private TextField EnterLabel;
+    private RadioButton yesButton;
 
     @FXML
-    private TextField OutLabel;
+    private TextField enterField;
 
     @FXML
-    private TextField OutLabel1;
-
-    @FXML
-    private TextField OutLabel2;
-
-    @FXML
-    private TextField OutLabel3;
-
-    @FXML
-    private RadioButton YesButton;
-
-
-    @FXML
-    private RadioButton NoButton;
+    private TextField statusField;
 
 
     @FXML
     void SaveData(ActionEvent event) {
-        SaveFile saveFile = new SaveFile(NameLabel.getText(), DirectoryLabel.getText());
+        SaveFile saveFile = new SaveFile(nameField.getText(), directoryField.getText());
 
-            Tech tech = new Tech(new Calc(new Parameters()),74,YesButton.isSelected());
-            OutLabel3.setText(saveFile.write(tech.saveText()));
+            Tech tech = new Tech(new Calc(new Parameters()),Integer.parseInt(enterField.getText()),yesButton.isSelected());
+            statusField.setText(saveFile.write(tech.saveText()));
     }
 
     @FXML
