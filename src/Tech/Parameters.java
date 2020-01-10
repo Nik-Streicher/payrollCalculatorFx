@@ -3,78 +3,76 @@ package Tech;
 public class Parameters {
 
     // tax, starting parameters
-    private int taxDiscount = 2070;
-    private double sGW = 133.8;
+    private static int taxDiscount = 2070;
+    public static double sGW = 133.8;
 
     // 1) employer
-    private double iSEmployer = 24.8;
-    private double hSEmployer = 9;
+    private static double iSEmployer = 24.8;
+    private static double hSEmployer = 9;
 
 
     // 2)employee
-    private double iSEmployee = 6.5;
-    private double hSEmployee = 4.5;
+    private static double iSEmployee = 6.5;
+    private static double hSEmployee = 4.5;
 
 
     // 3) Tax on activity
-    private double tax = 15;
+    private static double tax = 15;
 
     // 4) getter + setter
-
-
     int getTaxDiscount() {
         return taxDiscount;
     }
 
-    void setTaxDiscount(int taxDiscount) {
-        this.taxDiscount = taxDiscount;
+    public void setTaxDiscount(int taxDiscount) {
+        Parameters.taxDiscount = taxDiscount;
     }
 
     double getSGW() {
         return sGW;
     }
 
-    void setSGW(double sGW) {
-        this.sGW = sGW;
+    public void setSGW(double sGW) {
+        Parameters.sGW = sGW;
     }
 
     double getISEmployer() {
         return iSEmployer;
     }
 
-    void setISEmployer(double iSEmployer) {
-        this.iSEmployer = iSEmployer;
+    public void setISEmployer(double iSEmployer) {
+        Parameters.iSEmployer = iSEmployer;
     }
 
     double getHSEmployer() {
         return hSEmployer;
     }
 
-    void setHSEmployer(double hSEmployer) {
-        this.hSEmployer = hSEmployer;
+    public void setHSEmployer(double hSEmployer) {
+        Parameters.hSEmployer = hSEmployer;
     }
 
     double getISEmployee() {
         return iSEmployee;
     }
 
-    void setISEmployee(double iSEmployee) {
-        this.iSEmployee = iSEmployee;
+    public void setISEmployee(double iSEmployee) {
+        Parameters.iSEmployee = iSEmployee;
     }
 
     double getHSEmployee() {
         return hSEmployee;
     }
 
-    void setHSEmployee(double hSEmployee) {
-        this.hSEmployee = hSEmployee;
+    public void setHSEmployee(double hSEmployee) {
+        Parameters.hSEmployee = hSEmployee;
     }
 
     double getTax() {
         return tax;
     }
 
-    void setTax(double tax) {
-        this.tax = tax;
+    public void setTax(double tax) {
+        Parameters.tax = tax;
     }
 }

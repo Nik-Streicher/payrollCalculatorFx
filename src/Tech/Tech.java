@@ -2,11 +2,11 @@ package Tech;
 
 public class Tech {
 
-    public Tech(Calc calc, int wage ,boolean choose ) {
+    public Tech(Calc calc, int wage, boolean choose) {
         this.calc = calc;
         this.wage = wage;
         this.choose = choose;
-        if(choose)
+        if (choose)
             this.saveTextChoose = "Ano";
         else this.saveTextChoose = "Ne";
     }

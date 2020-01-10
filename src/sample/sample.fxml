@@ -8,12 +8,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #f2a305;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-    <AnchorPane layoutX="5.0" layoutY="103.0" prefHeight="675.0" prefWidth="1241.0" style="-fx-background-color: #454340;">
-        <TextField id="EnterLabel" fx:id="nameField" layoutX="198.0" layoutY="596.0" promptText="Name" style="-fx-border-radius: 5;" />
-        <Button fx:id="calcButton" layoutX="282.0" layoutY="47.0" mnemonicParsing="false" onAction="#vypociteMzdu" prefHeight="42.0" prefWidth="83.0" text="Spočítat" />
-        <Button fx:id="saveButton" layoutX="14.0" layoutY="611.0" mnemonicParsing="false" onAction="#SaveData" prefHeight="50.0" prefWidth="178.0" text="Save" />
-        <TextField id="EnterLabel" fx:id="directoryField" layoutX="198.0" layoutY="630.0" promptText="Directory" style="-fx-border-radius: 5;" />
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1244.0" style="-fx-background-color: #f2a305;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <AnchorPane layoutX="-6.0" layoutY="97.0" prefHeight="673.0" prefWidth="1250.0" style="-fx-background-color: #454340;">
+        <TextField id="EnterLabel" fx:id="nameField" layoutX="207.0" layoutY="587.0" promptText="Název" style="-fx-border-radius: 5;" />
+        <Button fx:id="calcButton" layoutX="282.0" layoutY="47.0" mnemonicParsing="false" onAction="#calc" prefHeight="42.0" prefWidth="83.0" text="Spočítat" />
+        <Button fx:id="saveButton" layoutX="14.0" layoutY="602.0" mnemonicParsing="false" onAction="#saveData" prefHeight="50.0" prefWidth="178.0" text="Uložit" />
+        <TextField id="EnterLabel" fx:id="directoryField" layoutX="207.0" layoutY="622.0" promptText="Adresář" style="-fx-border-radius: 5;" />
         <RadioButton fx:id="yesButton" layoutX="76.0" layoutY="129.0" mnemonicParsing="false" text="Ano" textFill="WHITE">
             <toggleGroup>
                 <ToggleGroup fx:id="yesNoGroup" />
@@ -26,50 +26,70 @@
             </font>
         </Label>
         <TextField id="EnterLabel" fx:id="enterField" layoutX="67.0" layoutY="53.0" promptText="Hrubá mzda" style="-fx-border-radius: 5;" />
-      <TextField fx:id="statusField" editable="false" layoutX="198.0" layoutY="555.0" promptText="Status Field" />
-      <TextField layoutX="799.0" layoutY="68.0" />
-      <TextField layoutX="799.0" layoutY="462.0" />
-      <TextField layoutX="799.0" layoutY="222.0" />
-      <TextField layoutX="799.0" layoutY="178.0" />
-      <TextField layoutX="800.0" layoutY="504.0" />
-      <TextField layoutX="799.0" layoutY="596.0" />
-      <TextField layoutX="799.0" layoutY="547.0" />
-      <TextField layoutX="799.0" layoutY="366.0" />
-      <TextField layoutX="799.0" layoutY="322.0" />
-      <Label layoutX="843.0" layoutY="22.0" text="Základ" textFill="WHITE">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Label layoutX="661.0" layoutY="73.0" text="Superhrubá mzda:" textFill="WHITE" />
-      <Label layoutX="752.0" layoutY="118.0" text="Zaměstnavatel odvody z mzdy" textFill="WHITE">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Label layoutX="669.0" layoutY="183.0" text="Socialní pojištění:" textFill="WHITE" />
-      <Label layoutX="658.0" layoutY="227.0" text="Zdravotní pojištění:" textFill="WHITE" />
-      <Label layoutX="757.0" layoutY="274.0" text="Zaměstnanec odvody z mzdy" textFill="WHITE">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Label layoutX="669.0" layoutY="327.0" text="Socialní pojištění:" textFill="WHITE" />
-      <Label layoutX="658.0" layoutY="371.0" text="Zdravotní pojištění:" textFill="WHITE" />
-      <Label layoutX="789.0" layoutY="414.0" text="Daň ze závislé činnosti" textFill="WHITE">
-         <font>
-            <Font size="21.0" />
-         </font>
-      </Label>
-      <Label layoutX="702.0" layoutY="467.0" text="Základ daní:" textFill="WHITE" />
-      <Label layoutX="742.0" layoutY="509.0" text="Daň:" textFill="WHITE" />
-      <Label layoutX="650.0" layoutY="552.0" text="Daň po odpoču slevy:" textFill="WHITE" />
-      <Label layoutX="696.0" layoutY="601.0" text="Čistá mzda:" textFill="WHITE" />
-      <Label layoutX="89.0" layoutY="99.0" text="Sleva poplatníka" textFill="WHITE" />
+        <TextField fx:id="statusField" editable="false" layoutX="207.0" layoutY="547.0" promptText="Status Field" />
+        <TextField fx:id="field1" layoutX="799.0" layoutY="68.0" />
+        <TextField fx:id="field6" layoutX="799.0" layoutY="462.0" />
+        <TextField fx:id="field3" layoutX="799.0" layoutY="222.0" />
+        <TextField fx:id="field2" layoutX="799.0" layoutY="178.0" />
+        <TextField fx:id="field7" layoutX="800.0" layoutY="504.0" />
+        <TextField fx:id="field9" layoutX="799.0" layoutY="596.0" />
+        <TextField fx:id="field8" layoutX="799.0" layoutY="547.0" />
+        <TextField fx:id="field5" layoutX="799.0" layoutY="366.0" />
+        <TextField fx:id="field4" layoutX="799.0" layoutY="322.0" />
+        <Label layoutX="843.0" layoutY="22.0" text="Základ" textFill="WHITE">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Label>
+        <Label layoutX="661.0" layoutY="73.0" text="Superhrubá mzda:" textFill="WHITE" />
+        <Label layoutX="752.0" layoutY="118.0" text="Zaměstnavatel odvody z mzdy" textFill="WHITE">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Label>
+        <Label layoutX="669.0" layoutY="183.0" text="Socialní pojištění:" textFill="WHITE" />
+        <Label layoutX="658.0" layoutY="227.0" text="Zdravotní pojištění:" textFill="WHITE" />
+        <Label layoutX="757.0" layoutY="274.0" text="Zaměstnanec odvody z mzdy" textFill="WHITE">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Label>
+        <Label layoutX="669.0" layoutY="327.0" text="Socialní pojištění:" textFill="WHITE" />
+        <Label layoutX="658.0" layoutY="371.0" text="Zdravotní pojištění:" textFill="WHITE" />
+        <Label layoutX="789.0" layoutY="414.0" text="Daň ze závislé činnosti" textFill="WHITE">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Label>
+        <Label layoutX="702.0" layoutY="467.0" text="Základ daní:" textFill="WHITE" />
+        <Label layoutX="742.0" layoutY="509.0" text="Daň:" textFill="WHITE" />
+        <Label layoutX="650.0" layoutY="552.0" text="Daň po odpoču slevy:" textFill="WHITE" />
+        <Label layoutX="696.0" layoutY="601.0" text="Čistá mzda:" textFill="WHITE" />
+        <Label layoutX="89.0" layoutY="99.0" text="Sleva poplatníka" textFill="WHITE" />
+        <TextField fx:id="set1" layoutX="20.0" layoutY="267.0" promptText="Sleva na dani" text="2070" />
+        <TextField fx:id="set2" layoutX="20.0" layoutY="338.0" promptText="Superhrubá mzda" text="9" />
+        <TextField fx:id="set3" layoutX="223.0" layoutY="267.0" promptText="Socialní pojištění" text="133.8" />
+        <TextField fx:id="set4" layoutX="223.0" layoutY="338.0" promptText="Zdravotní pojištění" text="6.5" />
+        <TextField fx:id="set5" layoutX="430.0" layoutY="267.0" promptText="Socialní pojištění" text="24.8" />
+        <TextField fx:id="set6" layoutX="430.0" layoutY="338.0" promptText="Zdravotní pojištění" text="4.5" />
+        <TextField fx:id="set7" layoutX="20.0" layoutY="406.0" promptText="Daň" text="15" />
+        <Button fx:id="parameterSaveButton" layoutX="254.0" layoutY="397.0" mnemonicParsing="false" onAction="#saveParameters" prefHeight="70.0" prefWidth="114.0" text="Uložit údaje" />
+        <Label layoutX="156.0" layoutY="182.0" text="Nastavení hodnot" textFill="#fcfcfc">
+            <font>
+                <Font name="System Bold Italic" size="37.0" />
+            </font>
+        </Label>
+      <Label layoutX="73.0" layoutY="234.0" prefHeight="28.0" prefWidth="115.0" text="Sleva na daňi" textFill="WHITE" />
+      <Label layoutX="266.0" layoutY="234.0" prefHeight="28.0" prefWidth="115.0" text="Socialní pojištění" textFill="WHITE" />
+      <Label layoutX="466.0" layoutY="234.0" prefHeight="28.0" prefWidth="115.0" text="Socialní pojištění" textFill="WHITE" />
+      <Label layoutX="56.0" layoutY="308.0" prefHeight="28.0" prefWidth="115.0" text="Superhrubá mzda" textFill="WHITE" />
+      <Label layoutX="245.0" layoutY="308.0" prefHeight="28.0" prefWidth="143.0" text="Zdravotní pojištění" textFill="WHITE" />
+      <Label layoutX="466.0" layoutY="308.0" prefHeight="28.0" prefWidth="115.0" text="Zdravotní pojištění" textFill="WHITE" />
+      <Label layoutX="88.0" layoutY="378.0" prefHeight="28.0" prefWidth="30.0" text="Daň" textFill="WHITE" />
     </AnchorPane>
-   <Label layoutX="439.0" layoutY="25.0" text="Payroll Calculator">
-      <font>
-         <Font name="System Italic" size="48.0" />
-      </font>
-   </Label>
+    <Label layoutX="439.0" layoutY="25.0" text="Payroll Calculator">
+        <font>
+            <Font name="System Italic" size="48.0" />
+        </font>
+    </Label>
 </AnchorPane>
