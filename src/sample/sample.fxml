@@ -26,16 +26,16 @@
             </font>
         </Label>
         <TextField id="EnterLabel" fx:id="enterField" layoutX="67.0" layoutY="53.0" promptText="Hrubá mzda" style="-fx-border-radius: 5;" />
-        <TextField fx:id="statusField" editable="false" layoutX="207.0" layoutY="547.0" promptText="Status Field" />
-        <TextField fx:id="field1" layoutX="799.0" layoutY="68.0" />
-        <TextField fx:id="field6" layoutX="799.0" layoutY="462.0" />
-        <TextField fx:id="field3" layoutX="799.0" layoutY="222.0" />
-        <TextField fx:id="field2" layoutX="799.0" layoutY="178.0" />
-        <TextField fx:id="field7" layoutX="800.0" layoutY="504.0" />
-        <TextField fx:id="field9" layoutX="799.0" layoutY="596.0" />
-        <TextField fx:id="field8" layoutX="799.0" layoutY="547.0" />
-        <TextField fx:id="field5" layoutX="799.0" layoutY="366.0" />
-        <TextField fx:id="field4" layoutX="799.0" layoutY="322.0" />
+        <TextField fx:id="statusField" editable="false" layoutX="207.0" layoutY="547.0" mouseTransparent="true" promptText="Status Field" />
+        <TextField fx:id="field1" editable="false" layoutX="799.0" layoutY="68.0" mouseTransparent="true" />
+        <TextField fx:id="field6" editable="false" layoutX="799.0" layoutY="462.0" mouseTransparent="true" />
+        <TextField fx:id="field3" editable="false" layoutX="799.0" layoutY="222.0" mouseTransparent="true" />
+        <TextField fx:id="field2" editable="false" layoutX="799.0" layoutY="178.0" mouseTransparent="true" />
+        <TextField fx:id="field7" editable="false" layoutX="800.0" layoutY="504.0" mouseTransparent="true" />
+        <TextField fx:id="field9" layoutX="799.0" layoutY="596.0" mouseTransparent="true" />
+        <TextField fx:id="field8" editable="false" layoutX="799.0" layoutY="547.0" mouseTransparent="true" />
+        <TextField fx:id="field5" editable="false" layoutX="799.0" layoutY="366.0" mouseTransparent="true" />
+        <TextField fx:id="field4" editable="false" layoutX="799.0" layoutY="322.0" mouseTransparent="true" />
         <Label layoutX="843.0" layoutY="22.0" text="Základ" textFill="WHITE">
             <font>
                 <Font size="21.0" />
